@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="600.0" prefWidth="902.0" style="-fx-background-color: FFFFFF; -fx-border-color: BED8D4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.projectjavafx.screenControllers.PurchasesTimeFrameController">
+    <children>
+        <Pane layoutY="1.0" prefHeight="55.0" prefWidth="902.0" style="-fx-background-color: #FAFAFD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="27.0" prefHeight="55.0" prefWidth="600.0" text="Controle de Operações Comerciais / Relatórios" textAlignment="CENTER" textFill="#1a6ca5">
+                    <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="832.0" />
+                <Hyperlink layoutX="843.0" onAction="#logout" prefHeight="55.0" prefWidth="51.0" style="-fx-border-width: 0;" text="Sair" textFill="#1a6ca5">
+                    <font>
+                        <Font name="Roboto" size="16.0" />
+                    </font>
+                </Hyperlink>
+                <ImageView fx:id="iconeSair" fitHeight="30.0" fitWidth="15.0" layoutX="825.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/iconeSair.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="66.0" prefHeight="58.0" prefWidth="803.0" text="Compras por período" textAlignment="CENTER" textFill="#1a6ca5" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0">
+            <font>
+                <Font name="Roboto Bold" size="48.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableView" layoutX="27.0" layoutY="248.0" prefHeight="321.0" prefWidth="841.0" style="-fx-background-color: #FAFAFD; -fx-border-color: #1a6ca5; -fx-border-radius: 5; -fx-text-fill:#1a6ca5; -fx-font-family: Roboto; -fx-font-size:16.0">
+            <columns>
+                <TableColumn fx:id="dateTimeColumn" editable="false" prefWidth="183.33334350585938" resizable="false" text="Data" />
+                <TableColumn fx:id="productColumn" editable="false" prefWidth="183.99996948242188" resizable="false" text="Produto" />
+                <TableColumn fx:id="supplierColumn" editable="false" prefWidth="254.66671752929688" resizable="false" text="Fornecedor" />
+                <TableColumn fx:id="quantityColumn" editable="false" minWidth="0.0" prefWidth="82.00006103515625" resizable="false" text="Qtde" />
+                <TableColumn fx:id="ammountColumn" editable="false" prefWidth="138.00006103515625" resizable="false" text="Total (R$)" />
+            </columns>
+        </TableView>
+        <Label layoutX="338.0" layoutY="143.0" text="Informe o período de referência:" textFill="#1a6ca5">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="startDateInput" alignment="CENTER" layoutX="85.0" layoutY="184.0" prefHeight="36.0" prefWidth="179.0" promptText="Início (dd/mm/aaaa)">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="endDateInput" alignment="CENTER" layoutX="268.0" layoutY="184.0" prefHeight="36.0" prefWidth="179.0" promptText="Fim (dd/mm/aaaa)">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </TextField>
+        <Button layoutX="452.0" layoutY="184.0" mnemonicParsing="false" onAction="#issueReport" prefHeight="36.0" prefWidth="179.0" text="Gerar relatório" textFill="#1a6ca5">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Button>
+        <Button layoutX="635.0" layoutY="184.0" mnemonicParsing="false" onAction="#clearDates" prefHeight="36.0" prefWidth="179.0" text="Limpar" textFill="#1a6ca5">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Button>
+        <Label fx:id="invalidStartDateLabel" layoutX="136.0" layoutY="220.0" text="* Data inválida" textFill="#f20707" visible="false" />
+        <Label fx:id="invalidEndDateLabel" layoutX="319.0" layoutY="220.0" text="* Data inválida" textFill="#f20707" visible="false" />
+        <Hyperlink layoutX="756.0" layoutY="1.0" onAction="#backToMenu" prefHeight="55.0" prefWidth="51.0" style="-fx-border-width: 0;" text="Menu" textFill="#1a6ca5">
+            <font>
+                <Font name="Roboto" size="16.0" />
+            </font>
+        </Hyperlink>
+        <ImageView fx:id="menuIcon" fitHeight="25.0" fitWidth="34.0" layoutX="730.0" layoutY="16.0" onMouseClicked="#backToMenu" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/menuIcon.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.projectjavafx.screenControllers.SignInController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="386.0" prefWidth="400.0">
+      <children>
+          <MenuBar layoutX="20.0" layoutY="25.0" prefWidth="325.0">
+              <Menu mnemonicParsing="false" text="Controle de Operações Comerciais">
+                  <MenuItem mnemonicParsing="false" text="Close" />
+              </Menu>
+              <Menu mnemonicParsing="false">
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+              </Menu>
+          </MenuBar>
+           <Label layoutX="139.0" layoutY="83.0" prefHeight="35.0" prefWidth="232.0" text="Olá! Quem é você?" textFill="#1a6ca5">
+              <font>
+                  <Font size="24.0" />
+              </font>
+           </Label>
+      
+          <Label layoutX="140.0" layoutY="137.0" prefHeight="17.0" prefWidth="318.0" text="CPF" textFill="#2081c3" />
+         <TextField id="cpf" fx:id="cpf" layoutX="139.0" layoutY="168.0" prefHeight="25.0" prefWidth="194.0" promptText="cpf" />
+         <Label layoutX="139.0" layoutY="206.0" prefHeight="17.0" prefWidth="319.0" text="Senha" textFill="#2081c3" />
+          <Button layoutX="206.0" layoutY="281.0" onAction="#SignIn" style="-fx-background-color: #2081C3;" text="ENTRAR" textFill="WHITE" />
+      
+          <!-- Forgot your password button -->
+          <Button layoutX="150.0" layoutY="330.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: #000000;" text="Forgot your Password?" underline="true">
+              <font>
+                  <Font size="15.0" />
+              </font>
+          </Button>
+         <PasswordField id="password" fx:id="password" layoutX="140.0" layoutY="232.0" promptText="password" />
+      </children>
+   </AnchorPane>
+    <HBox prefHeight="62.0" prefWidth="291.0" />
+   <Label fx:id="labelOut" prefHeight="17.0" prefWidth="232.0" />
+</VBox>

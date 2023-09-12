@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="600.0" prefWidth="902.0" style="-fx-background-color: FFFFFF; -fx-border-color: BED8D4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.application.projectjavafx.screenControllers.SellersHighPerformanceController">
+    <children>
+        <Pane layoutY="1.0" prefHeight="55.0" prefWidth="902.0" style="-fx-background-color: #FAFAFD;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="27.0" prefHeight="55.0" prefWidth="600.0" text="Controle de Operações Comerciais / Relatórios" textAlignment="CENTER" textFill="#1a6ca5">
+                    <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                    </font>
+                </Label>
+                <Pane layoutX="832.0" />
+                <Hyperlink layoutX="843.0" onAction="#logout" prefHeight="55.0" prefWidth="51.0" style="-fx-border-width: 0;" text="Sair" textFill="#1a6ca5">
+                    <font>
+                        <Font name="Roboto" size="16.0" />
+                    </font>
+                </Hyperlink>
+                <ImageView fx:id="iconeSair" fitHeight="30.0" fitWidth="15.0" layoutX="825.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@iconeSair.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="66.0" prefHeight="58.0" prefWidth="803.0" text="Vendedores destacados" textAlignment="CENTER" textFill="#1a6ca5" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0">
+            <font>
+                <Font name="Roboto Bold" size="48.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tableView" layoutX="27.0" layoutY="248.0" prefHeight="321.0" prefWidth="841.0" style="-fx-background-color: #FAFAFD; -fx-border-color: #1a6ca5; -fx-border-radius: 5; -fx-text-fill:#1a6ca5; -fx-font-family: Roboto; -fx-font-size:16.0">
+            <columns>
+                <TableColumn fx:id="nameColumnn" editable="false" prefWidth="256.0000400543213" resizable="false" text="Nome" />
+                <TableColumn fx:id="identifierNumberColumnn" editable="false" prefWidth="146.00003051757812" resizable="false" text="CPF" />
+                <TableColumn fx:id="seniorityColumn" editable="false" prefWidth="113.33334350585938" resizable="false" text="Posição" />
+                <TableColumn fx:id="signUpDateColumn" editable="false" minWidth="0.0" prefWidth="115.33331298828125" resizable="false" text="Ingresso" />
+                <TableColumn fx:id="ammountColumn" editable="false" prefWidth="216.66668701171875" resizable="false" text="Vendas no período (R$)" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="29.0" layoutY="143.0" prefHeight="34.0" prefWidth="841.0" text="Este relatório contém a lista de vendedores júniores e plenos que, nos últimos 3 meses," textAlignment="JUSTIFY" textFill="#1a6ca5">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Hyperlink layoutX="756.0" layoutY="1.0" onAction="#backToMenu" prefHeight="55.0" prefWidth="51.0" style="-fx-border-width: 0;" text="Menu" textFill="#1a6ca5">
+            <font>
+                <Font name="Roboto" size="16.0" />
+            </font>
+        </Hyperlink>
+        <ImageView fx:id="menuIcon" fitHeight="25.0" fitWidth="34.0" layoutX="730.0" layoutY="16.0" onMouseClicked="#backToMenu" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@menuIcon.png" />
+            </image>
+        </ImageView>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="170.0" prefHeight="34.0" prefWidth="841.0" text="realizaram vendas em volume pelo menos 20% superior à média." textAlignment="JUSTIFY" textFill="#1a6ca5">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="203.0" prefHeight="34.0" prefWidth="168.0" text="Período de referência:" textAlignment="JUSTIFY" textFill="#1a6ca5">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelTimeframe" alignment="CENTER" contentDisplay="CENTER" layoutX="429.0" layoutY="203.0" prefHeight="34.0" prefWidth="168.0" text="xx/xx/xxxx a xx/xx/xxxx" textAlignment="JUSTIFY" textFill="#1a6ca5">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
